@@ -15,6 +15,7 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var backdropView: UIImageView!
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
     
     var movie: [String:Any]!
@@ -25,6 +26,9 @@ class MovieDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         titleLabel.text = movie["title"] as? String
         titleLabel.sizeToFit()
+        let rating = (movie["vote_average"] as? NSNumber)?.floatValue
+        ratingLabel.text = "Ratings: " + String(rating!) + " / 10"
+        ratingLabel.sizeToFit()
         synopsisLabel.text = movie["overview"] as? String
         synopsisLabel.sizeToFit()
         
@@ -32,6 +36,8 @@ class MovieDetailsViewController: UIViewController {
         let posterPath = movie["poster_path"] as! String
         let posterUrl = URL(string: baseUrl + posterPath)
         posterView.af_setImage(withURL: posterUrl!)
+        posterView.layer.borderColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.8).cgColor
+        posterView.layer.borderWidth = 1
         
         let backdropPath = movie["backdrop_path"] as! String
         let backdropUrl = URL(string: "https://image.tmdb.org/t/p/w780" + backdropPath)
