@@ -160,7 +160,6 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7bS-z0-ypj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1lw-ft-xqm"/>
                             <constraint firstItem="7bS-z0-ypj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3t8-A7-pTf"/>
@@ -300,6 +299,6 @@
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="way-l7-Wwx"/>
+        <segue reference="Mdd-WS-CNM"/>
     </inferredMetricsTieBreakers>
 </document>
